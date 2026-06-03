@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waroeng Mbako Tingwe Pangestu</title>
+    <!-- Menggunakan Tailwind CSS via CDN untuk tampilan modern & responsif -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-amber-800 text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-xl font-bold tracking-wide">Tingwe Pangestu</h1>
+            <a href="#kalkulator" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-4 rounded-full text-sm transition shadow">
+                Cek Kalkulator Hemat
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="bg-gradient-to-br from-amber-900 to-amber-950 text-white py-16 px-6 text-center shadow-inner">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-amber-700 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full text-amber-100">Solusi Cerdas Perokok</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-4 leading-tight">Harga Rokok Naik Terus?<br><span class="text-amber-400">Saatnya Beralih ke Tingwe!</span></h2>
+            <p class="mt-6 text-base md:text-lg text-amber-100/90 max-w-2xl mx-auto">
+                Nikmati cita rasa tembakau asli pilihan berkualitas tinggi dengan biaya jauh lebih hemat. Linting sendiri rokokmu, sesuaikan seleramu, dan amankan dompetmu!
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20Mas%20Pras,%20saya%20tertarik%20mau%20tanya%20produk%20Tingwe%20Pangestu" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i> Chat Mas Pras (Order)
+                </a>
+                <a href="#produk" class="bg-transparent border-2 border-white/40 hover:border-white text-white font-semibold py-3 px-8 rounded-xl transition">
+                    Lihat Katalog Produk
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- KELANJUTAN MANFAAT / STATS -->
+    <section class="py-12 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-amber-700 text-3xl mb-2"><i class="fas fa-wallet"></i></div>
+                    <h3 class="font-bold text-lg text-gray-900">Hemat > 50%</h3>
+                    <p class="text-sm text-gray-600 mt-1">Pangkas pengeluaran bulanan rokok secara signifikan tanpa mengurangi kepuasan.</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-amber-700 text-3xl mb-2"><i class="fas fa-leaf"></i></div>
+                    <h3 class="font-bold text-lg text-gray-900">Tembakau Murni</h3>
+                    <p class="text-sm text-gray-600 mt-1">Daun tembakau asli nusantara pilihan berkualitas tanpa tambahan bahan kimia berat.</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-amber-700 text-3xl mb-2"><i class="fas fa-sliders"></i></div>
+                    <h3 class="font-bold text-lg text-gray-900">Bisa Custom Rasa</h3>
+                    <p class="text-sm text-gray-600 mt-1">Bebas pilih saus rasa, cengkeh, filter, hingga jenis kertas sesuai selera pribadi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KALKULATOR HEMAT INTERAKTIF -->
+    <section id="kalkulator" class="py-16 px-6 bg-amber-50">
+        <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-amber-100">
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-amber-900">Kalkulator Hemat Tingwe</h3>
+                <p class="text-sm text-gray-600 mt-1">Hitung berapa uang yang bisa kamu simpan setiap bulan</p>
+            </div>
+            
+            <div class="space-y-5">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Harga Rokok Kamu Sekarang (per bungkus):</label>
+                    <div class="relative rounded-xl shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500 font-medium">Rp</div>
+                        <input type="number" id="hargaRokok" value="30000" class="block w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:bg-white focus:outline-none transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Jumlah Konsumsi (bungkus per minggu):</label>
+                    <input type="range" id="jumlahRokok" min="1" max="14" value="7" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-700">
+                    <div class="text-right text-sm font-bold text-amber-800 mt-1"><span id="valJumlahRokok">7</span> Bungkus / Minggu</div>
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 bg-emerald-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-emerald-800 font-bold uppercase tracking-wider">Estimasi Uang yang Kamu Hemat:</p>
+                    <p class="text-3xl font-black text-emerald-700 mt-1" id="totalHemat">Rp 0</p>
+                    <p class="text-xs text-emerald-600 mt-1 font-medium">*Asumsi beralih ke Tingwe Pangestu rata-rata hanya habis Rp 10.000 untuk jumlah lintingan yang sama.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEMO VIDEO NGELINTING -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Belum Tahu Cara Ngelinting?</h3>
+            <p class="text-gray-600 mb-8 max-w-lg mx-auto">Tenang, gampang banget kok! Cuma butuh waktu kurang dari 1 menit pakai alat linting manual. Tonton video tutorial singkat ini:</p>
+            <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gray-900">
+                <!-- Mas Heru nanti tinggal ganti ID video YouTube di bawah ini (setelah embed/) jika punya video sendiri -->
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI PRODUK -->
+    <section id="produk" class="py-16 px-6 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-amber-950">Katalog Produk Pilihan</h3>
+                <p class="text-gray-600 mt-2">Sedia berbagai varian tembakau nusantara, kertas papir, filter, dan alat cetak rokok lengkap.</p>
+            </div>
+
+            <!-- GRID PRODUK -->
+            <!-- PENTING: Mas Heru silakan ubah nama file gambar di dalam src="assets/..." sesuai nama foto produk asli yang diupload tadi -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Produk 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+                    <div class="aspect-square bg-gray-100 flex items-center justify-center text-gray-400">
+                        <!-- Contoh panggil foto dari folder assets -->
+                        <img src="assets/foto-produk-1.jpg" alt="Tembakau Premium" class="w-full h-full object-cover onerror-replace">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Tembakau Gayo Hijau Premium</h4>
+                            <p class="text-xs text-gray-500 mt-1">Aroma khas, tarikan halus, kualitas rajangan super rapi.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-50 flex justify-between items-center">
+                            <span class="text-amber-700 font-extrabold text-lg">Rp 15.000 <span class="text-xs text-gray-500 font-normal">/bks</span></span>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded">Best Seller</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+                    <div class="aspect-square bg-gray-100 flex items-center justify-center text-gray-400">
+                        <img src="assets/foto-produk-2.jpg" alt="Tembakau Rasa" class="w-full h-full object-cover onerror-replace">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Tembakau Varian Rasa (Milder/Flavored)</h4>
+                            <p class="text-xs text-gray-500 mt-1">Tersedia rasa Cappuccino, Menthol, Apple, Blueberry, dll.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-50 flex justify-between items-center">
+                            <span class="text-amber-700 font-extrabold text-lg">Rp 12.000 <span class="text-xs text-gray-500 font-normal">/bks</span></span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Populer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col">
+                    <div class="aspect-square bg-gray-100 flex items-center justify-center text-gray-400">
+                        <img src="assets/foto-alat.jpg" alt="Paket Alat Linting" class="w-full h-full object-cover onerror-replace">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Paket Alat Linting Lengkap</h4>
+                            <p class="text-xs text-gray-500 mt-1">Sudah termasuk alat cetak manual, lem, 1 pack filter, & papir.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-50 flex justify-between items-center">
+                            <span class="text-amber-700 font-extrabold text-lg">Rp 25.000 <span class="text-xs text-gray-500 font-normal">/paket</span></span>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded">Hemat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-sm text-gray-600 mb-4">Butuh cengkeh, lem, atau jenis filter kemasan kiloan?</p>
+                <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20Mas%20Pras,%20mau%20tanya%20list%20lengkap%20stok%20Waroeng%20Tingwe%20Pangestu" target="_blank" class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-emerald-700 border-2 border-emerald-600 font-bold py-3 px-6 rounded-xl transition shadow-sm">
+                    <i class="fab fa-whatsapp"></i> Tanya Stok Lengkap via WA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-amber-950 text-amber-200/80 py-8 px-6 text-center text-sm border-t border-amber-900/50">
+        <div class="max-w-3xl mx-auto space-y-2">
+            <p class="font-bold text-amber-400 text-base">Waroeng Mbako Tingwe Pangestu</p>
+            <p>Menyediakan Kebutuhan Linting Dewe Terlengkap & Termurah</p>
+            <p class="pt-4 text-xs text-amber-300/50">&copy; 2026 Tingwe Pangestu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC UNTUK KALKULATOR -->
+    <script>
+        const hargaRokokInput = document.getElementById('hargaRokok');
+        const jumlahRokokInput = document.getElementById('jumlahRokok');
+        const valJumlahRokok = document.getElementById('valJumlahRokok');
+        const totalHematOutput = document.getElementById('totalHemat');
+
+        function hitungPenghematan() {
+            const hargaBungkus = parseFloat(hargaRokokInput.value) || 0;
+            const bungkusPerMinggu = parseFloat(jumlahRokokInput.value) || 0;
+            
+            // Perhitungan sebulan (4.33 minggu)
+            const pengeluaranRokokBiasaBulan = hargaBungkus * bungkusPerMinggu * 4.33;
+            // Asumsi tingwe per bungkus setara habis sekitar Rp 10.000
+            const pengeluaranTingweBulan = 10000 * bungkusPerMinggu * 4.33;
+            
+            let kehematan = pengeluaranRokokBiasaBulan - pengeluaranTingweBulan;
+            if(kehematan < 0) kehematan = 0;
+
+            // Format ke mata uang Rupiah
+            totalHematOutput.textContent = 'Rp ' + Math.round(kehematan).toLocaleString('id-ID') + ' / Bulan';
+            valJumlahRokok.textContent = bungkusPerMinggu;
+        }
+
+        // Jalankan kalkulator setiap ada perubahan input
+        hargaRokokInput.addEventListener('input', hitungPenghematan);
+        jumlahRokokInput.addEventListener('input', hitungPenghematan);
+        
+        // Jalankan pertama kali saat halaman dibuka
+        hitungPenghematan();
+
+        // Trik kecil fallback jika gambar tidak ditemukan/salah nama file biar ga pecah tampilan
+        document.querySelectorAll('.onerror-replace').forEach(img => {
+            img.onerror = function() {
+                this.style.display = 'none';
+                const parent = this.parentElement;
+                parent.innerHTML = `<div class="p-6 text-center text-xs text-amber-800 font-medium"><i class="fas fa-image text-2xl mb-2 block text-amber-600/40"></i>[ Foto '${this.getAttribute('src').replace('assets/', '')}' belum disesuaikan ]</div>`;
+            };
+        });
+    </script>
+</body>
+</html>
